@@ -1,3 +1,9 @@
+require('rose-pine').setup({
+    highlight_groups = {
+        ['@variable'] = { italic = false }
+    }
+})
+
 function ColorMyPencils(color)
 	color = color or "rose-pine"
 	vim.cmd.colorscheme(color)
