@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
+  --use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -31,8 +31,8 @@ return require('packer').startup(function(use)
 	  branch = 'v3.x',
 	  requires = {
 		  --- Uncomment these if you want to manage the language servers from neovim
-		  -- {'williamboman/mason.nvim'},
-		  -- {'williamboman/mason-lspconfig.nvim'},
+		  {'williamboman/mason.nvim'},
+		  {'williamboman/mason-lspconfig.nvim'},
 
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},
@@ -42,10 +42,6 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 	  }
   }
-  use {
-	  "williamboman/mason.nvim",
-	  "williamboman/mason-lspconfig.nvim",
-	  "neovim/nvim-lspconfig",
-  }
+  
   use('Aasim-A/scrollEOF.nvim')
 end)
