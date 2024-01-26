@@ -43,5 +43,11 @@ return require('packer').startup(function(use)
 	  }
   }
   
+  -- install without yarn or npm
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  
   use('Aasim-A/scrollEOF.nvim')
 end)
