@@ -1,6 +1,6 @@
 require('rose-pine').setup({
     highlight_groups = {
-        ['@variable'] = { italic = false }
+        ['@variable'] = { italic = false, bg = "none" }
     }
 })
 
@@ -10,6 +10,7 @@ function ColorMyPencils(color)
 	
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.api.nvim_set_hl(0, "@Property", { bg = "none" })
 end
 
 ColorMyPencils() 
