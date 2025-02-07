@@ -1,6 +1,7 @@
 require('rose-pine').setup({
     highlight_groups = {
-        ['@variable'] = { italic = false, bg = "none" }
+        ['@variable'] = { italic = false, bg = "none" },
+        ['@variable.parameter'] = { italic = false, bg = "none" }
     }
 })
 
