@@ -12,6 +12,8 @@ function ColorMyPencils(color)
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	vim.api.nvim_set_hl(0, "@Property", { bg = "none" })
+    vim.api.nvim_set_hl(0, "@parameter", { bg = "none" })
+	vim.api.nvim_set_hl(0, "@lsp.type.parameter", { bg = "none" })
 end
 
 ColorMyPencils() 
