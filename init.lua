@@ -37,3 +37,17 @@ vim.schedule(function()
 end)
 
 vim.opt.colorcolumn = "80"
+
+-- setup formatter
+require("conform").setup {
+  formatters_by_ft = {
+    python = { "black" },
+  },
+}
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format { bufnr = args.buf }
+  end,
+})
